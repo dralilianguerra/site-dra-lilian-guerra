@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Lílian Guerra | Dermatologista</title>
+  <meta
+    name="description"
+    content="Dermatologia e rejuvenescimento natural com ciência. Agendamentos, contato, localização e Instagram da Dra. Lílian Guerra."
+  />
+
+  <style>
+    :root {
+      --text: #f5f2ee;
+      --muted: rgba(255, 255, 255, 0.82);
+      --line: rgba(255, 255, 255, 0.34);
+      --glass: rgba(255, 255, 255, 0.14);
+      --glass-hover: rgba(255, 255, 255, 0.20);
+      --shadow: rgba(0, 0, 0, 0.28);
+      --overlay-top: rgba(16, 10, 8, 0.18);
+      --overlay-middle: rgba(18, 12, 10, 0.42);
+      --overlay-bottom: rgba(9, 6, 5, 0.80);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #120d0b;
+      color: var(--text);
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      background:
+        linear-gradient(
+          180deg,
+          var(--overlay-top) 0%,
+          var(--overlay-middle) 45%,
+          var(--overlay-bottom) 100%
+        ),
+        url("lilian.jpg") center center / cover no-repeat;
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, rgba(255,255,255,0.02), transparent 45%),
+        linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.18) 100%);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 560px;
+      min-height: 100vh;
+      padding: 6vh 24px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
+    }
+
+    .spacer {
+      flex: 1 1 auto;
+      min-height: 22vh;
+    }
+
+    .name {
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: 0.98;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.22);
+    }
+
+    .specialty {
+      margin: 12px 0 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.6rem);
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .tagline {
+      margin: 34px auto 0;
+      max-width: 440px;
+      font-size: clamp(1.15rem, 3.4vw, 2rem);
+      line-height: 1.22;
+      font-weight: 300;
+      color: var(--muted);
+      text-shadow: 0 1px 10px rgba(0,0,0,0.16);
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 68px;
+      padding: 16px 20px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: var(--glass);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: clamp(1.1rem, 3vw, 1.55rem);
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: var(--glass-hover);
+      border-color: rgba(255,255,255,0.48);
+      transform: translateY(-1px);
+      box-shadow:
+        0 10px 24px var(--shadow),
+        inset 0 1px 0 rgba(255,255,255,0.10);
+      outline: none;
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+      line-height: 1.4;
+      color: rgba(255,255,255,0.88);
+      text-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 430px) {
+      .content {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .btn {
+        min-height: 62px;
+      }
+
+      .tagline {
+        max-width: 330px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .page {
+        background-position: center top;
+      }
+
+      .content {
+        max-width: 620px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="content" aria-label="Página principal da Dra. Lílian Guerra">
+      <div class="spacer"></div>
+
+      <header>
+        <h1 class="name">Lílian Guerra</h1>
+        <p class="specialty">Dermatologista</p>
+      </header>
+
+      <p class="tagline">Dermatologia e rejuvenescimento natural com ciência</p>
+
+      <nav class="buttons" aria-label="Links principais">
+        <a
+          class="btn"
+          href="https://api.whatsapp.com/send?phone=5581995454222&text=Ol%C3%A1%21"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agendamentos
+        </a>
+
+        <a class="btn" href="tel:32651793">
+          Fale conosco
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.waze.com/ul?ll=-8.03048240%2C-34.91774130&navigate=yes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Localização
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.instagram.com/dralilianguerra/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+      </nav>
+
+      <footer class="footer">
+        Dra. Lílian Guerra CRM-PE 19120 | RQE 678
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
